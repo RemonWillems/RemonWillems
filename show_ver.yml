@@ -9,9 +9,9 @@
     - name: run the command 'show version'
       ios_command:
         commands: show version
-      register: output1
+#      register: output1
 
 
-    - name: print result
-      debug:
-        var: output1.stdout_lines
+#    - name: print result
+#      debug:
+#        var: output1.stdout_lines
