@@ -11,7 +11,15 @@
         commands: show version
       register: output1
 
-
+    - name: print result
+      debug:
+        var: output1.stdout_lines
+    
+    - name: Show all interfaces
+      ios_command:
+        commands: sh ip int brief
+      register: output1
+      
     - name: print result
       debug:
         var: output1.stdout_lines
